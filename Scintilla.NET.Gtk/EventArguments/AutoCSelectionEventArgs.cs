@@ -3,7 +3,7 @@ using ScintillaNet.Abstractions.Enumerations;
 using ScintillaNet.Abstractions.EventArguments;
 using ScintillaNet.Abstractions.Interfaces.Collections;
 
-namespace ScintillaNet.Linux.EventArguments;
+namespace ScintillaNet.Gtk.EventArguments;
 
 /// <summary>
 /// Provides data for the <see cref="Scintilla.AutoCSelection" /> event.

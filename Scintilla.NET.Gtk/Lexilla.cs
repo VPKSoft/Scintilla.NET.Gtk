@@ -28,7 +28,7 @@ using System;
 using System.Runtime.InteropServices;
 using ScintillaNet.Abstractions;
 
-namespace ScintillaNet.Linux;
+namespace ScintillaNet.Gtk;
 
 /// <summary>
 /// Linux handler for the Scintilla's Lexilla library.

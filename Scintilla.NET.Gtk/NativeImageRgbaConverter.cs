@@ -24,21 +24,23 @@ SOFTWARE.
 */
 #endregion
 
-namespace ScintillaNet.Linux;
+using Gtk;
+
+namespace ScintillaNet.Gtk;
 
 /// <summary>
-/// A class to convert <see cref="Gtk.Image"/>s to RGBA byte data.
+/// A class to convert <see cref="Image"/>s to RGBA byte data.
 /// Implements the <see cref="INativeImageToRgbaConverter{TImage}" />
 /// </summary>
 /// <seealso cref="INativeImageToRgbaConverter{TImage}" />
 public static class NativeImageRgbaConverter
 {
     /// <summary>
-    /// Converts a <see cref="Gtk.Image"/> to ARGB byte array.
+    /// Converts a <see cref="Image"/> to ARGB byte array.
     /// </summary>
     /// <param name="image">The image to covert.</param>
     /// <returns>The bitmap converted to ARGB byte array (<see cref="byte"/>[]).</returns>
-    public static byte[] PixBufToBytes(Gtk.Image image)
+    public static byte[] PixBufToBytes(Image image)
     {
         return PixBufToBytes(image.Pixbuf);
     }

@@ -2,7 +2,7 @@
 using ScintillaNet.Abstractions.Collections;
 using Color = Gdk.Color;
 
-namespace ScintillaNet.Linux.Collections;
+namespace ScintillaNet.Gtk.Collections;
 
 /// <summary>
 /// An immutable collection of style definitions in a <see cref="Scintilla" /> control.

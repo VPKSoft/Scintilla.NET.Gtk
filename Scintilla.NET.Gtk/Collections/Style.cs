@@ -2,9 +2,9 @@ using System;
 using ScintillaNet.Abstractions;
 using ScintillaNet.Abstractions.Collections;
 using Color = Gdk.Color;
-using ColorTranslator = ScintillaNet.Linux.GdkUtils.ColorTranslator;
+using ColorTranslator = ScintillaNet.Gtk.GdkUtils.ColorTranslator;
 
-namespace ScintillaNet.Linux.Collections;
+namespace ScintillaNet.Gtk.Collections;
 
 /// <summary>
 /// A style definition in a <see cref="Scintilla" /> control.

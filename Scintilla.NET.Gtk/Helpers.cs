@@ -27,7 +27,7 @@ SOFTWARE.
 using Gdk;
 using static ScintillaNet.Abstractions.ScintillaConstants;
 
-namespace ScintillaNet.Linux;
+namespace ScintillaNet.Gtk;
 
 /// <summary>
 /// Some platform-depended helper methods.

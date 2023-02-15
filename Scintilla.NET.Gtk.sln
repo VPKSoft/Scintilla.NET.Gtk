@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scintilla.NET.Gtk", "Scintilla.NET.Gtk\Scintilla.NET.Gtk.csproj", "{0EF494C4-366D-4601-B758-2D74F1EC64C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{5951EEE7-9C20-4C6C-8230-5F55A28EB555}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0EF494C4-366D-4601-B758-2D74F1EC64C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EF494C4-366D-4601-B758-2D74F1EC64C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EF494C4-366D-4601-B758-2D74F1EC64C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5951EEE7-9C20-4C6C-8230-5F55A28EB555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5951EEE7-9C20-4C6C-8230-5F55A28EB555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5951EEE7-9C20-4C6C-8230-5F55A28EB555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5951EEE7-9C20-4C6C-8230-5F55A28EB555}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

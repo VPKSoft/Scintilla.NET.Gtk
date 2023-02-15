@@ -6,7 +6,7 @@ using ScintillaNet.Abstractions.Structs;
 using ScintillaNet.Abstractions.UtilityClasses;
 using static ScintillaNet.Abstractions.ScintillaConstants;
 
-namespace ScintillaNet.Linux.Collections;
+namespace ScintillaNet.Gtk.Collections;
 
 /// <summary>
 /// An immutable collection of lines of text in a <see cref="Scintilla" /> control.

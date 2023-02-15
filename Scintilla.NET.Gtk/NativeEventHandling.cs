@@ -3,9 +3,9 @@ using Gdk;
 using ScintillaNet.Abstractions.Classes;
 using ScintillaNet.Abstractions.Enumerations;
 using ScintillaNet.Abstractions.Interfaces.Collections;
-using ScintillaNet.Linux.EventArguments;
+using ScintillaNet.Gtk.EventArguments;
 
-namespace ScintillaNet.Linux;
+namespace ScintillaNet.Gtk;
 using static Abstractions.ScintillaConstants;
 using Keys = Gdk.Key;
 

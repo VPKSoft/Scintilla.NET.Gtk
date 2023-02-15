@@ -3,7 +3,7 @@ using ScintillaNet.Abstractions.Collections;
 using Color = Gdk.Color;
 using Image = Gtk.Image;
 
-namespace ScintillaNet.Linux.Collections;
+namespace ScintillaNet.Gtk.Collections;
 
 /// <summary>
 /// An immutable collection of markers in a <see cref="Scintilla" /> control.

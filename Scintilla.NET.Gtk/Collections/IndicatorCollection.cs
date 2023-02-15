@@ -4,7 +4,7 @@ using ScintillaNet.Abstractions.Collections;
 using ScintillaNet.Abstractions.Interfaces.Collections;
 using Color = Gdk.Color;
 
-namespace ScintillaNet.Linux.Collections;
+namespace ScintillaNet.Gtk.Collections;
 
 /// <summary>
 /// An immutable collection of indicators in a <see cref="Scintilla" /> control.

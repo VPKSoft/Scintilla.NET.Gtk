@@ -3,10 +3,10 @@ using ScintillaNet.Abstractions;
 using ScintillaNet.Abstractions.Collections;
 using ScintillaNet.Abstractions.Interfaces.Collections;
 using Color = Gdk.Color;
-using ColorTranslator = ScintillaNet.Linux.GdkUtils.ColorTranslator;
+using ColorTranslator = ScintillaNet.Gtk.GdkUtils.ColorTranslator;
 using static ScintillaNet.Abstractions.ScintillaConstants;
 
-namespace ScintillaNet.Linux.Collections;
+namespace ScintillaNet.Gtk.Collections;
 
 /// <summary>
 /// Represents an indicator in a <see cref="Scintilla" /> control.

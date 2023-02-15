@@ -3,11 +3,11 @@ using ScintillaNet.Abstractions;
 using ScintillaNet.Abstractions.Collections;
 using ScintillaNet.Abstractions.Enumerations;
 using Color = Gdk.Color;
-using ColorTranslator = ScintillaNet.Linux.GdkUtils.ColorTranslator;
+using ColorTranslator = ScintillaNet.Gtk.GdkUtils.ColorTranslator;
 using Image = Gtk.Image;
 using static ScintillaNet.Abstractions.ScintillaConstants;
 
-namespace ScintillaNet.Linux.Collections;
+namespace ScintillaNet.Gtk.Collections;
 
 /// <summary>
 /// Represents a margin marker in a <see cref="Scintilla" /> control.

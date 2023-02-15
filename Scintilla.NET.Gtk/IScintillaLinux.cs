@@ -27,13 +27,13 @@ SOFTWARE.
 using ScintillaNet.Abstractions;
 using ScintillaNet.Abstractions.Interfaces;
 using ScintillaNet.Abstractions.Interfaces.Methods;
-using ScintillaNet.Linux.Collections;
-using ScintillaNet.Linux.EventArguments;
+using ScintillaNet.Gtk.Collections;
+using ScintillaNet.Gtk.EventArguments;
 using Color = Gdk.Color;
 using Image = Gtk.Image;
 using Keys = Gdk.Key;
 
-namespace ScintillaNet.Linux;
+namespace ScintillaNet.Gtk;
 /// <summary>
 /// Interface for the Scintilla Linux control.
 /// Implements the <see cref="IScintillaLinuxCollections" />

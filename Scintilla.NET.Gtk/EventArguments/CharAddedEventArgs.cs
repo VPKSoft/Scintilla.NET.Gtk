@@ -1,6 +1,6 @@
 ﻿using ScintillaNet.Abstractions.EventArguments;
 
-namespace ScintillaNet.Linux.EventArguments;
+namespace ScintillaNet.Gtk.EventArguments;
 
 /// <summary>
 /// Provides data for the <see cref="Scintilla.CharAdded" /> event.

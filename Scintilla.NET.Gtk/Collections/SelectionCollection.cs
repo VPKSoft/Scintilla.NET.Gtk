@@ -2,7 +2,7 @@
 using ScintillaNet.Abstractions.Collections;
 using ScintillaNet.Abstractions.Interfaces.Collections;
 
-namespace ScintillaNet.Linux.Collections;
+namespace ScintillaNet.Gtk.Collections;
 
 /// <summary>
 /// A multiple selection collection.

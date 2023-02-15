@@ -34,19 +34,19 @@ using ScintillaNet.Abstractions.Enumerations;
 using ScintillaNet.Abstractions.Extensions;
 using ScintillaNet.Abstractions.Interfaces;
 using ScintillaNet.Abstractions.Structs;
-using ScintillaNet.Linux.Collections;
-using ScintillaNet.Linux.EventArguments;
-using ScintillaNet.Linux.GdkUtils;
+using ScintillaNet.Gtk.Collections;
+using ScintillaNet.Gtk.EventArguments;
+using ScintillaNet.Gtk.GdkUtils;
 using Color = Gdk.Color;
 using Image = Gtk.Image;
 using Key = Gdk.Key;
-using Style = ScintillaNet.Linux.Collections.Style;
+using Style = ScintillaNet.Gtk.Collections.Style;
 using Status = ScintillaNet.Abstractions.Enumerations.Status;
 using TabDrawMode = ScintillaNet.Abstractions.Enumerations.TabDrawMode;
 using WrapMode = ScintillaNet.Abstractions.Enumerations.WrapMode;
 using static ScintillaNet.Abstractions.ScintillaConstants;
 
-namespace ScintillaNet.Linux;
+namespace ScintillaNet.Gtk;
 
 using Keys = Gdk.Key;
 

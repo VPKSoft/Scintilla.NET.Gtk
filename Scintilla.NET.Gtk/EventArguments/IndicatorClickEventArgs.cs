@@ -2,7 +2,7 @@
 using ScintillaNet.Abstractions.EventArguments;
 using Key = Gdk.Key;
 
-namespace ScintillaNet.Linux.EventArguments;
+namespace ScintillaNet.Gtk.EventArguments;
 
 /// <summary>
 /// Provides data for the <see cref="Scintilla.IndicatorClick" /> event.

@@ -1,7 +1,7 @@
 ﻿using ScintillaNet.Abstractions.Classes;
 using ScintillaNet.Abstractions.EventArguments;
 
-namespace ScintillaNet.Linux.EventArguments;
+namespace ScintillaNet.Gtk.EventArguments;
 
 /// <summary>
 /// Notifications are sent (fired) from the Scintilla control to its container when an event has occurred that may interest the container. This class cannot be inherited.
