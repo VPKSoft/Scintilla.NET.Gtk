@@ -37,14 +37,11 @@ jobs:
       if: ${{ github.event_name != 'pull_request' }}
       run: |
         nuget_config_bytes=`echo $NUGETCONFIG | base64 --decode`
-        currentDirectory=`pwd`
-        nugetConfigFile="$currentDirectory/nuget.config"
+        nugetConfigFile="$GITHUB_WORKSPACE/nuget.config"
         echo "$nuget_config_bytes" > $nugetConfigFile
     - name: NuGet push
       if: ${{ github.event_name != 'pull_request' }}
       run: |
-        currentDirectory=`pwd`
-        
         for i in $currentDirectory/*Scintilla.NET*.nupkg; do
             nuget push $i $NUGET_APIKEY -Source $NUGETAPI -SkipDuplicate
             
