@@ -36,8 +36,9 @@ jobs:
     - name: Decode nuget.config
       if: ${{ github.event_name != 'pull_request' }}
       run: |
+        currentDirectory=`pwd`
         nuget_config_bytes=`echo $NUGETCONFIG | base64 --decode`
-        nugetConfigFile="/home/runner/work/Scintilla.NET.Gtk/Scintilla.NET.Gtk/nuget.config"
+        nugetConfigFile="$currentDirectory/nuget.config"
         echo "$nuget_config_bytes" > $nugetConfigFile
     - name: NuGet push
       if: ${{ github.event_name != 'pull_request' }}
