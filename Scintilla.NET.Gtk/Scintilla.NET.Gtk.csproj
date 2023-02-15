@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<OutputType>Library</OutputType>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AssemblyTitle>Scintilla.NET.Gtk</AssemblyTitle>
+		<Company>Jacob Slusser, VPKSoft, cyber960</Company>
+		<Product>Scintilla.NET.Gtk</Product>
+		<Description>Source Editing Component based on Scintilla 5 series.</Description>
+		<Copyright>Copyright © VPKSoft 2023.</Copyright>
+		<Version>1.0.0.5320</Version>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<DocumentationFile>bin\$(Configuration)\Scintilla.NET.Gtk.xml</DocumentationFile>
+		<UseWindowsForms>true</UseWindowsForms>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<LangVersion>latest</LangVersion>
+		<RootNamespace>ScintillaNet.Gtk</RootNamespace>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="GtkSharp" Version="3.24.24.38" />
+		<PackageReference Include="Scintilla.NET.Abstractions" Version="1.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- For the native libraries to embed into NuGet generation -->
+		<None Include="Scintilla.NET.Gtk.targets">
+			<PackagePath>build\</PackagePath>
+			<Pack>true</Pack>
+		</None>
+		<None Include="liblexilla.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<PackagePath>build\</PackagePath>
+			<Pack>true</Pack>
+		</None>
+		<None Include="libscintilla.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<PackagePath>build\</PackagePath>
+			<Pack>true</Pack>
+		</None>
+	</ItemGroup>
+</Project>
