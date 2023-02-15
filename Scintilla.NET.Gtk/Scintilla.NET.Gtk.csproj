@@ -17,6 +17,12 @@
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>ScintillaNet.Gtk</RootNamespace>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>Scintilla.NET.Gtk</Title>
+		<PackageProjectUrl>https://github.com/VPKSoft/Scintilla.NET.Gtk</PackageProjectUrl>
+		<PackageIcon>vpksoft_logo.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/VPKSoft/Scintilla.NET.Gtk</RepositoryUrl>
+		<PackageTags>scintilla;gtk;wrapper;source-editing</PackageTags>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="GtkSharp" Version="3.24.24.38" />
@@ -25,6 +31,14 @@
 
 	<ItemGroup>
 		<!-- For the native libraries to embed into NuGet generation -->
+		<None Include="..\README.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\vpksoft_logo.png">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
 		<None Include="Scintilla.NET.Gtk.targets">
 			<PackagePath>build\</PackagePath>
 			<Pack>true</Pack>
