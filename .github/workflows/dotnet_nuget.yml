@@ -38,7 +38,7 @@ jobs:
       run: |
         nuget_config_bytes=`echo $NUGETCONFIG | base64 --decode`
         currentDirectory=`pwd`
-        $nugetConfigFile="$currentDirectory/nuget.config"
+        nugetConfigFile="$currentDirectory/nuget.config"
         echo "$nuget_config_bytes" > $nugetConfigFile
     - name: NuGet push
       if: ${{ github.event_name != 'pull_request' }}
