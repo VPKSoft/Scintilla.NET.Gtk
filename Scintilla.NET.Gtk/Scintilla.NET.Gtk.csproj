@@ -24,6 +24,8 @@
 		<RepositoryUrl>https://github.com/VPKSoft/Scintilla.NET.Gtk</RepositoryUrl>
 		<PackageTags>scintilla;gtk;wrapper;source-editing</PackageTags>
 		<PackageReleaseNotes>See: https://github.com/VPKSoft/Scintilla.NET.Gtk</PackageReleaseNotes>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="GtkSharp" Version="3.24.24.38" />
