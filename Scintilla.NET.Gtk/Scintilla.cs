@@ -173,7 +173,10 @@ public class Scintilla : Widget, IScintillaLinux
                 case SCN_CALLTIPCLICK:
                     // scn.position: 1 = Up Arrow, 2 = DownArrow: 0 = Elsewhere
                     CallTipClick?.Invoke(this, new CallTipClickEventArgs(this, (CallTipClickType)scn.position.ToInt32()));
-                    break;                
+                    break;
+                case SCN_AUTOCSELECTIONCHANGE:
+                    AutoCSelectionChange?.Invoke(this, new AutoCSelectionChangeEventArgs(this, Lines, scn.text, scn.position.ToInt32(), scn.listType));
+                    break;
             }
         }
     }
@@ -779,6 +782,17 @@ public class Scintilla : Widget, IScintillaLinux
 
             return count;
         }
+    }
+
+    /// <summary>
+    /// Gets or sets the characters considered 'whitespace' characters when using any word-based logic.
+    /// </summary>
+    /// <returns>A string of whitespace characters.</returns>
+    public string WhitespaceChars
+    {
+        get => this.WhitespaceCharsGet();
+        
+        set => this.WhitespaceCharsSet(value);
     }
 
     /// <summary>
@@ -1438,6 +1452,26 @@ public class Scintilla : Widget, IScintillaLinux
     }
 
     /// <summary>
+    /// Sets the X caret policy.
+    /// </summary>
+    /// <param name="caretPolicy">a combination of <see cref="CaretPolicy"/> values.</param>
+    /// <param name="caretSlop">the caretSlop value</param>    
+    public void SetXCaretPolicy(CaretPolicy caretPolicy, int caretSlop)
+    {
+        this.SetXCaretPolicyExtension(caretPolicy, caretSlop);
+    }
+
+    /// <summary>
+    /// Sets the Y caret policy.
+    /// </summary>
+    /// <param name="caretPolicy">a combination of <see cref="CaretPolicy"/> values.</param>
+    /// <param name="caretSlop">the caretSlop value</param>
+    public void SetYCaretPolicy(CaretPolicy caretPolicy, int caretSlop)
+    {
+        this.SetYCaretPolicyExtension(caretPolicy, caretSlop);
+    }
+
+    /// <summary>
     /// Sets additional options for displaying folds.
     /// </summary>
     /// <param name="flags">A bitwise combination of the <see cref="FoldFlags" /> enumeration.</param>
@@ -1899,6 +1933,9 @@ public class Scintilla : Widget, IScintillaLinux
 
     /// <inheritdoc />
     public event EventHandler<UpdateUIEventArgs>? UpdateUi;
+
+    /// <inheritdoc />
+    public event EventHandler<AutoCSelectionChangeEventArgs>? AutoCSelectionChange;
 
     /// <inheritdoc />
     public event EventHandler<EventArgs>? ZoomChanged;

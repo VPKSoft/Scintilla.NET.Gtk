@@ -36,86 +36,55 @@ class MainWindow {
     {
         Application.Quit ();
     }
-
-
+    
     private static void CreateCsStyling()
     {
-        var color = Gdk.Color.Zero;
-        Gdk.Color.Parse("#804000", ref color);
-        scintilla.Styles[Cpp.Preprocessor].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.Preprocessor].BackColor = color;
-        Gdk.Color.Parse("#000000", ref color);
-        scintilla.Styles[Cpp.Default].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.Default].BackColor = color;
-        Gdk.Color.Parse("#0000FF", ref color);
-        scintilla.Styles[Cpp.Word].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.Word].BackColor = color;
-        Gdk.Color.Parse("#8000FF", ref color);
-        scintilla.Styles[Cpp.Word2].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.Word2].BackColor = color;
-        Gdk.Color.Parse("#FF8000", ref color);
-        scintilla.Styles[Cpp.Number].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.Number].BackColor = color;
-        Gdk.Color.Parse("#000080", ref color);
-        scintilla.Styles[Cpp.String].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.String].BackColor = color;
-        Gdk.Color.Parse("#000000", ref color);
-        scintilla.Styles[Cpp.Character].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.Character].BackColor = color;
+        Color FromHtml(string value)
+        {
+            var color = new Color();
+            Color.Parse(value, ref color);
+            return color;
+        }
+        
+        scintilla.Styles[Cpp.Preprocessor].ForeColor = FromHtml("#804000");
+        scintilla.Styles[Cpp.Preprocessor].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.Default].ForeColor = FromHtml("#000000");
+        scintilla.Styles[Cpp.Default].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.Word].ForeColor = FromHtml("#0000FF");
+        scintilla.Styles[Cpp.Word].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.Word2].ForeColor = FromHtml("#8000FF");
+        scintilla.Styles[Cpp.Word2].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.Number].ForeColor = FromHtml("#FF8000");
+        scintilla.Styles[Cpp.Number].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.String].ForeColor = FromHtml("#000080");
+        scintilla.Styles[Cpp.String].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.Character].ForeColor = FromHtml("#000000");
+        scintilla.Styles[Cpp.Character].BackColor = FromHtml("#FFFFFF");
         scintilla.Styles[Cpp.Operator].Bold = true;
-        Gdk.Color.Parse("#000080", ref color);
-        scintilla.Styles[Cpp.Operator].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.Operator].BackColor = color;
-        Gdk.Color.Parse("#000000", ref color);
-        scintilla.Styles[Cpp.Verbatim].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.Verbatim].BackColor = color;
+        scintilla.Styles[Cpp.Operator].ForeColor = FromHtml("#000080");
+        scintilla.Styles[Cpp.Operator].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.Verbatim].ForeColor = FromHtml("#000000");
+        scintilla.Styles[Cpp.Verbatim].BackColor = FromHtml("#FFFFFF");
         scintilla.Styles[Cpp.Regex].Bold = true;
-        Gdk.Color.Parse("#000000", ref color);
-        scintilla.Styles[Cpp.Regex].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.Regex].BackColor = color;
-        Gdk.Color.Parse("#008000", ref color);
-        scintilla.Styles[Cpp.Comment].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.Comment].BackColor = color;
-        Gdk.Color.Parse("#008080", ref color);
-        scintilla.Styles[Cpp.CommentLine].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.CommentLine].BackColor = color;
-        Gdk.Color.Parse("#008080", ref color);
-        scintilla.Styles[Cpp.CommentDoc].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.CommentDoc].BackColor = color;
-        Gdk.Color.Parse("#008080", ref color);
-        scintilla.Styles[Cpp.CommentLineDoc].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.CommentLineDoc].BackColor = color;
+        scintilla.Styles[Cpp.Regex].ForeColor = FromHtml("#000000");
+        scintilla.Styles[Cpp.Regex].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.Comment].ForeColor = FromHtml("#008000");
+        scintilla.Styles[Cpp.Comment].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.CommentLine].ForeColor = FromHtml("#008080");
+        scintilla.Styles[Cpp.CommentLine].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.CommentDoc].ForeColor = FromHtml("#008080");
+        scintilla.Styles[Cpp.CommentDoc].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.CommentLineDoc].ForeColor = FromHtml("#008080");
+        scintilla.Styles[Cpp.CommentLineDoc].BackColor = FromHtml("#FFFFFF");
         scintilla.Styles[Cpp.CommentDocKeyword].Bold = true;
-        Gdk.Color.Parse("#008080", ref color);
-        scintilla.Styles[Cpp.CommentDocKeyword].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.CommentDocKeyword].BackColor = color;
-        Gdk.Color.Parse("#008080", ref color);
-        scintilla.Styles[Cpp.CommentDocKeywordError].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.CommentDocKeywordError].BackColor = color;
-        Gdk.Color.Parse("#008000", ref color);
-        scintilla.Styles[Cpp.PreprocessorComment].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.PreprocessorComment].BackColor = color;
-        Gdk.Color.Parse("#008080", ref color);
-        scintilla.Styles[Cpp.PreprocessorCommentDoc].ForeColor = color;
-        Gdk.Color.Parse("#FFFFFF", ref color);
-        scintilla.Styles[Cpp.PreprocessorCommentDoc].BackColor = color;
+        scintilla.Styles[Cpp.CommentDocKeyword].ForeColor = FromHtml("#008080");
+        scintilla.Styles[Cpp.CommentDocKeyword].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.CommentDocKeywordError].ForeColor = FromHtml("#008080");
+        scintilla.Styles[Cpp.CommentDocKeywordError].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.PreprocessorComment].ForeColor = FromHtml("#008000");
+        scintilla.Styles[Cpp.PreprocessorComment].BackColor = FromHtml("#FFFFFF");
+        scintilla.Styles[Cpp.PreprocessorCommentDoc].ForeColor = FromHtml("#008080");
+        scintilla.Styles[Cpp.PreprocessorCommentDoc].BackColor = FromHtml("#FFFFFF");
 
         scintilla.LexerName = "cpp";
 
@@ -136,10 +105,8 @@ class MainWindow {
         scintilla.Margins[2].Sensitive = true;
         scintilla.Margins[2].Width = 20;
 
-        Gdk.Color.Parse("#f5f3ed", ref color);
-        var c1 = color;
-        Gdk.Color.Parse("#5e5c56", ref color);
-        var c2 = color;
+        var c1 = FromHtml("#F5F3ED");
+        var c2 = FromHtml("#5E5C56");
 
         // Set colors for all folding markers
         for (var i = 25; i <= 31; i++)
