@@ -23,6 +23,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/VPKSoft/Scintilla.NET.Gtk</RepositoryUrl>
 		<PackageTags>scintilla;gtk;wrapper;source-editing</PackageTags>
+		<PackageReleaseNotes>See: https://github.com/VPKSoft/Scintilla.NET.Gtk</PackageReleaseNotes>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="GtkSharp" Version="3.24.24.38" />
