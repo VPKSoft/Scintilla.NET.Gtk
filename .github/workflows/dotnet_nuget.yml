@@ -44,6 +44,6 @@ jobs:
       if: ${{ github.event_name != 'pull_request' }}
       run: |
         find . -name '*Scintilla.NET.Gtk*.nupkg' | while read line; do
-          nuget push '$line' $NUGET_APIKEY -Source $NUGETAPI -SkipDuplicate
-          nuget push '$line' $GH_PACKAGES_APIKEY -Source $PACKAGESAPI -SkipDuplicate
+          nuget push $line $NUGET_APIKEY -Source $NUGETAPI -SkipDuplicate
+          nuget push $line $GH_PACKAGES_APIKEY -Source $PACKAGESAPI -SkipDuplicate
         done
