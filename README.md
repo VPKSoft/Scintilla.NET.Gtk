@@ -12,6 +12,9 @@ The project should be considered as beta in this development stage, please do re
 
 ![image](https://user-images.githubusercontent.com/40712699/218978784-e7b5e233-ebe0-4fdb-92ee-cbc0180f15b4.png)
 
+*NOTE*
+The embeded `lib*.so` libraries have been build on Linux Mint, if errors occur I'm open to better ways to use the Scintilla native source.
+
 ### Thanks to
 * [JetBrains](https://www.jetbrains.com/?from=Scintilla.NET.Gtk) for their open source license(s).
 
