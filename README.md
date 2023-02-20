@@ -6,7 +6,7 @@ A GTK/Linux port of Scintilla.NET
 
 Thia is a [GtkSharp](https://github.com/GtkSharp/GtkSharp) implementation of the [Scintilla.NET](https://github.com/VPKSoft/Scintilla.NET)
 
-The project should be considered as beta in this development stage, please do report bugs, issues or improve the API via a [pull request](https://github.com/VPKSoft/Scintilla.NET.Gtk/pulls).
+The project should be considered as beta in this development stage, please do report bugs, issues or improve to the library via a [pull request](https://github.com/VPKSoft/Scintilla.NET.Gtk/pulls).
 
 *Test application*
 
