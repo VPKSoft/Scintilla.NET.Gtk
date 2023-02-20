@@ -15,6 +15,8 @@ The project should be considered as beta in this development stage, please do re
 *NOTE*
 The embeded `lib*.so` libraries have been build on Linux Mint, if errors occur I'm open to better ways to use the Scintilla native source.
 
+The version: The package versioning is semantic except the fourth number indicates the native Scintilla control. E.g. 5320 &rarr; 5.3.2.0.
+
 ### Thanks to
 * [JetBrains](https://www.jetbrains.com/?from=Scintilla.NET.Gtk) for their open source license(s).
 
