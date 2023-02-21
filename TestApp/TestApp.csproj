@@ -9,7 +9,7 @@
 
     <ItemGroup>
       <PackageReference Include="GtkSharp" Version="3.24.24.38" />
-      <PackageReference Include="Scintilla.NET.Gtk" Version="1.0.0.5320" />
+      <PackageReference Include="Scintilla.NET.Gtk" Version="1.0.1.5320" />
     </ItemGroup>
 
 </Project>
