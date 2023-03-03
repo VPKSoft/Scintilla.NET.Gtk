@@ -30,6 +30,7 @@ using System.Text;
 using Gtk;
 using ScintillaNet.Abstractions;
 using ScintillaNet.Abstractions.Classes;
+using ScintillaNet.Abstractions.Collections;
 using ScintillaNet.Abstractions.Enumerations;
 using ScintillaNet.Abstractions.Extensions;
 using ScintillaNet.Abstractions.Interfaces;
@@ -204,7 +205,10 @@ public class Scintilla : Widget, IScintillaLinux
     
     // Modified event optimization
     private int? cachedPosition;
-    private string? cachedText;    
+    private string? cachedText;
+    
+    // Cross-platform styles.
+    private StyleCollectionPrimitive? stylesPrimitive;
     #endregion
 
     #region Native
@@ -1165,7 +1169,7 @@ public class Scintilla : Widget, IScintillaLinux
     /// <summary>
     /// Searches the document for the marker handle and deletes the marker if found.
     /// </summary>
-    /// <param name="markerHandle">The <see cref="MarkerHandle" /> created by a previous call to <see cref="Line.MarkerAdd" /> of the marker to delete.</param>
+    /// <param name="markerHandle">The <see cref="MarkerHandle" /> created by a previous call to <see cref="LineBase.MarkerAdd" /> of the marker to delete.</param>
     public void MarkerDeleteHandle(MarkerHandle markerHandle)
     {
         this.MarkerDeleteHandleExtension(markerHandle);
@@ -1183,7 +1187,7 @@ public class Scintilla : Widget, IScintillaLinux
     /// <summary>
     /// Searches the document for the marker handle and returns the line number containing the marker if found.
     /// </summary>
-    /// <param name="markerHandle">The <see cref="MarkerHandle" /> created by a previous call to <see cref="Line.MarkerAdd" /> of the marker to search for.</param>
+    /// <param name="markerHandle">The <see cref="MarkerHandle" /> created by a previous call to <see cref="LineBase.MarkerAdd" /> of the marker to search for.</param>
     /// <returns>If found, the zero-based line index containing the marker; otherwise, -1.</returns>
     public int MarkerLineFromHandle(MarkerHandle markerHandle)
     {
@@ -1662,7 +1666,7 @@ public class Scintilla : Widget, IScintillaLinux
     /// <param name="lineStart">The zero-based index of the line range to start showing.</param>
     /// <param name="lineEnd">The zero-based index of the line range to end showing.</param>
     /// <seealso cref="HideLines" />
-    /// <seealso cref="Line.Visible" />
+    /// <seealso cref="LineBase.Visible" />
     public void ShowLines(int lineStart, int lineEnd)
     {
         this.ShowLinesExtension(lineStart, lineEnd, Lines);
@@ -2984,9 +2988,9 @@ public class Scintilla : Widget, IScintillaLinux
     /// </summary>
     /// <returns>
     /// One of the <see cref="Status" /> enumeration values.
-    /// The default is <see cref="Scintilla.NET.Abstractions.Enumerations.Status.Ok" />.
+    /// The default is <see cref="ScintillaNet.Abstractions.Enumerations.Status.Ok" />.
     /// </returns>
-    /// <remarks>The status can be reset by setting the property to <see cref="Scintilla.NET.Abstractions.Enumerations.Status.Ok" />.</remarks>
+    /// <remarks>The status can be reset by setting the property to <see cref="ScintillaNet.Abstractions.Enumerations.Status.Ok" />.</remarks>
     public Status Status
     {
         get => this.StatusGet();
@@ -3278,5 +3282,16 @@ public class Scintilla : Widget, IScintillaLinux
 
         set => this.ZoomSet(value);
     }
+
+    /// <inheritdoc />
+    public StyleCollectionPrimitive StylesPrimitive
+    {
+        get
+        {
+            stylesPrimitive ??= new StyleCollectionPrimitive(this);
+            return stylesPrimitive;
+        }
+    }
+
     #endregion
 }

@@ -13,7 +13,7 @@ public class HotspotClickEventArgs<TKeys> : HotspotClickEventArgsBase<TKeys>
     where TKeys : Enum
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="HotspotClickEventArgs" /> class.
+    /// Initializes a new instance of the <see cref="HotspotClickEventArgs{TKeys}" /> class.
     /// </summary>
     /// <param name="scintilla">The <see cref="Scintilla" /> control that generated this event.</param>
     /// <param name="lineCollectionGeneral">A reference to Scintilla's line collection.</param>
