@@ -10,7 +10,7 @@ using static Abstractions.ScintillaConstants;
 using Keys = Gdk.Key;
 
 /// <summary>
-/// Extension methods fop native event generating and handling events for the current platform (Linux & GTK).
+/// Extension methods fop native event generating and handling events for the current platform (Linux &amp; GTK).
 /// </summary>
 internal static class NativeEventHandling
 {

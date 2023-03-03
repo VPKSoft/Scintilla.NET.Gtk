@@ -30,9 +30,7 @@ namespace ScintillaNet.Gtk;
 
 /// <summary>
 /// A class to convert <see cref="Image"/>s to RGBA byte data.
-/// Implements the <see cref="INativeImageToRgbaConverter{TImage}" />
 /// </summary>
-/// <seealso cref="INativeImageToRgbaConverter{TImage}" />
 public static class NativeImageRgbaConverter
 {
     /// <summary>
